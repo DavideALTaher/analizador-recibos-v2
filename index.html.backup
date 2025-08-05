@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Recibos - Energy Saver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-8">Analizador de Recibos Eléctricos</h1>
+        
+        <!-- Upload Section -->
+        <div id="upload-section" class="bg-white p-6 rounded shadow">
+            <input type="text" id="client-name" placeholder="Nombre del cliente" class="w-full p-2 border rounded mb-4">
+            <div id="dropzone" class="dropzone border-2 border-dashed p-8 text-center">
+                <p>Arrastra archivos aquí o haz clic para seleccionar</p>
+            </div>
+            <button id="analyze-btn" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded">Analizar</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="hidden bg-white p-6 rounded shadow mt-6">
+            <h2 class="text-2xl font-bold mb-4">Resultados del Análisis</h2>
+            <div id="results-content"></div>
+            <button id="generate-pagare" class="mt-4 bg-purple-600 text-white px-6 py-2 rounded">Generar Pagaré</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
